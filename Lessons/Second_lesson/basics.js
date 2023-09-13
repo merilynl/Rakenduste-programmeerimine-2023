@@ -57,6 +57,40 @@ const newArray = numberArray.map((element) => element + 5);
 //.map(()=>{})
 console.log({newArray});
 
-//filter
-const filteredArray = numberArray.filter((element) => element % 2 == 1);
-console.log(filteredArray);
+const newArray2 = numberArray.map((element, index, array) => {
+    //key: value  siin esimene "element" on shorthand, kuna key ja value on samanimelised
+    console.log({
+        element, 
+        newElement: element+5, 
+        index, 
+        array
+    });
+
+    return element + 5;
+});
+console.log(newArray2);
+
+//filter - kõik mis on true lähevad uude massiivi
+const filteredArray = numberArray.filter((element) => element < 4);
+console.log({numberArray, filteredArray});
+
+const names = ["Juku", "Mari", "Jaan", "Anni"];
+const data = names.map(name => ({name: name, age: name.length+20, email: `${name.toLowerCase()}@company.com`, address: `${name} street ${name.length+1}${name.length+1}`, username: name.split("").reverse().join("")}));
+console.log(data);
+console.log(data[0]);
+
+//tahan juku andmetele pikkuse juurde lisada
+//spreadsyntax ... - võta vana objekt ja lisa midagi juurde
+const addHeight = {
+    ...data[0],
+    height: 175
+}
+console.log({addHeight});
+
+//saab üle kirjutada andmeid:
+const changeAge = {
+    ...data[0],
+    age: 26
+}
+console.log({changeAge});
+
