@@ -1,4 +1,4 @@
-{
+
 "semi": false, //no semicolon after statement
 "tabWidth": 2, //number of sppaces per indentation level
 "printWidth": 80, //specify the line length that the printer will wrap on
@@ -9,4 +9,4 @@
 "trailingComma": "none", //print trailing commas wherever possible in multi-line comma-separated structures
 "arrowParens": "avoid", //include parentheses around a sole arrow function parameter
 "singleAttributePerLine": true //enforce single attribute per line in HTML, Vue and JSX.
-}
+
